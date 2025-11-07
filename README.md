@@ -2,7 +2,9 @@
 
 > **Live Demo**: [https://sachinjain2000.github.io/yc-ai-dashboard](https://sachinjain2000.github.io/yc-ai-dashboard)
 
-An interactive analytics dashboard visualizing Y Combinator's AI company portfolio with real-time statistics, trends, and insights.
+An interactive analytics dashboard visualizing Y Combinator's AI company portfolio with **real-time data** that updates daily, featuring comprehensive statistics, trends, and insights.
+
+🔄 **Live Data**: Automatically fetches the latest AI company data from Y Combinator's database every day via the [unofficial YC API](https://github.com/yc-oss/api).
 
 ---
 
@@ -35,6 +37,8 @@ This dashboard transforms raw company data into actionable insights through inte
 - **Geographic Analysis**: Top countries and regions for AI companies
 
 ### 🎯 **Key Metrics Dashboard**
+- **Real-time data**: Automatically updated daily from YC's official database
+- **849+ AI companies** tracked across all batches
 - Total number of YC AI companies
 - Year-over-year growth statistics
 - Country-wise distribution
@@ -75,6 +79,37 @@ This dashboard transforms raw company data into actionable insights through inte
 - **ESBuild** - Fast JavaScript bundler
 - **PostCSS** - CSS transformations
 - **Prettier** - Code formatting
+
+---
+
+## 📊 Data Source
+
+This dashboard uses the **unofficial Y Combinator API** maintained by the open-source community:
+
+- **API Repository**: [yc-oss/api](https://github.com/yc-oss/api)
+- **Update Frequency**: Daily (automated via GitHub Actions)
+- **Data Source**: Y Combinator's Algolia search index
+- **Total Companies**: 5,548+ YC companies (849+ AI-tagged)
+- **Coverage**: All publicly launched companies with YC pages
+- **Last Updated**: Automatically synced every 24 hours
+
+### API Endpoints Used
+
+```typescript
+// Fetch all AI-tagged companies
+https://yc-oss.github.io/api/tags/artificial-intelligence.json
+
+// API metadata
+https://yc-oss.github.io/api/meta.json
+```
+
+The dashboard processes this data in real-time to generate:
+- Company statistics by year, country, and status
+- Growth trends and visualizations
+- Searchable company directory
+- Interactive analytics
+
+**Note**: This is an unofficial API and not affiliated with Y Combinator. Data is sourced from publicly available information on the YC website.
 
 ---
 
