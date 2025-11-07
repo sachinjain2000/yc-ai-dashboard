@@ -45,6 +45,14 @@ This dashboard transforms raw company data into actionable insights through inte
 - Company status breakdown
 - Batch-level analytics
 
+### 🇮🇳 **Regional Views**
+- **India Dashboard**: Dedicated view for 210+ YC companies in India
+- City-wise distribution (Bengaluru, Gurugram, Hyderabad, etc.)
+- Industry breakdown specific to Indian market
+- Growth trajectory and hiring trends
+- Notable companies: Razorpay, Meesho, Groww, Zepto
+- Success rate and acquisition statistics
+
 ### 🔍 **Data Exploration**
 - Raw data table view with sorting and filtering
 - Search functionality across all company attributes
