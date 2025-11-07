@@ -20,7 +20,7 @@ This dashboard transforms raw company data into actionable insights through inte
 
 ### Dashboard Overview
 ![Dashboard Overview](screenshots/dashboard-overview.webp)
-*Comprehensive analytics showing total startups, active companies, growth trends, and status distribution*
+*Real-time analytics showing 849 AI startups, 735 active companies (86.6%), 47 acquisitions, and 200 companies in 2025 batch*
 
 ### Key Insights & Geographic Distribution
 ![Key Insights](screenshots/dashboard-insights.webp)
