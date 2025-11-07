@@ -14,6 +14,18 @@ This dashboard transforms raw company data into actionable insights through inte
 
 ---
 
+## 📸 Screenshots
+
+### Dashboard Overview
+![Dashboard Overview](screenshots/dashboard-overview.webp)
+*Comprehensive analytics showing total startups, active companies, growth trends, and status distribution*
+
+### Key Insights & Geographic Distribution
+![Key Insights](screenshots/dashboard-insights.webp)
+*Geographic concentration, growth trends, and success rate analysis*
+
+---
+
 ## ✨ Features
 
 ### 📈 **Interactive Visualizations**
