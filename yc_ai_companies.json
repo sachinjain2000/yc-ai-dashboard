@@ -1,0 +1,794 @@
+[
+  {
+    "name": "Cruise",
+    "batch": "W2014",
+    "year": 2014,
+    "status": "Acquired",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Casetext",
+    "batch": "S2013",
+    "year": 2013,
+    "status": "Acquired",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Checkr",
+    "batch": "S2014",
+    "year": 2014,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Caper",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Acquired",
+    "location": "15 employees",
+    "country": "Other"
+  },
+  {
+    "name": "Podium",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "Lehi, UT, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Scale AI",
+    "batch": "S2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Sendbird",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "San Mateo, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Ridecell",
+    "batch": "W2012",
+    "year": 2012,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Truewind",
+    "batch": "W2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "LeadGenius",
+    "batch": "S2011",
+    "year": 2011,
+    "status": "Active",
+    "location": "Berkeley, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Shuttle",
+    "batch": "S2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "London, UK",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Flagright",
+    "batch": "W2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "Singapore",
+    "country": "Singapore"
+  },
+  {
+    "name": "CreativeMode",
+    "batch": "S2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "StarSling",
+    "batch": "X2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Domu Technology Inc.",
+    "batch": "S2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Gecko Robotics",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "Pittsburgh, PA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Replicate",
+    "batch": "W2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "StackAI",
+    "batch": "W2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Assembly",
+    "batch": "W2018",
+    "year": 2018,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Klarity",
+    "batch": "S2018",
+    "year": 2018,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "PARES AI",
+    "batch": "S2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "camelAI",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Rove",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Diligent",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "Berlin, Germany",
+    "country": "Germany"
+  },
+  {
+    "name": "Corgi",
+    "batch": "S2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Fieldguide",
+    "batch": "S2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Two Dots",
+    "batch": "S2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Pointhound",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "5 employees",
+    "country": "Other"
+  },
+  {
+    "name": "Intuned",
+    "batch": "S2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "Kirkland, WA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Ocular AI",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Centaur",
+    "batch": "W2019",
+    "year": 2019,
+    "status": "Active",
+    "location": "Boston, MA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Pernell",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Casca",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Acrely",
+    "batch": "S2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Cedana",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Atla",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "London, UK",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Deepnight",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Sully.ai",
+    "batch": "S2021",
+    "year": 2021,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Eloquent AI",
+    "batch": "X2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Standard AI",
+    "batch": "S2017",
+    "year": 2017,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "truthsystems",
+    "batch": "S2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Mashgin",
+    "batch": "W2015",
+    "year": 2015,
+    "status": "Active",
+    "location": "Palo Alto, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Sapling.ai",
+    "batch": "W2019",
+    "year": 2019,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Prosper",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Corgi Labs",
+    "batch": "W2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Roboflow",
+    "batch": "S2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Marblism",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Lumona",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "Cambridge, MA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Oneleet",
+    "batch": "S2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "50 employees",
+    "country": "Other"
+  },
+  {
+    "name": "Magic Hour",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Hatch",
+    "batch": "W2019",
+    "year": 2019,
+    "status": "Active",
+    "location": "Richmond, VA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "BrainKey",
+    "batch": "W2019",
+    "year": 2019,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Subsets",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "Copenhagen, Denmark",
+    "country": "Other"
+  },
+  {
+    "name": "Spine AI",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Approval AI",
+    "batch": "X2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Alguna",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "cocreate",
+    "batch": "S2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Campfire",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "California St, San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Silogy",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "WhiteLab Genomics",
+    "batch": "W2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "Paris, France",
+    "country": "France"
+  },
+  {
+    "name": "Daily",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Rally",
+    "batch": "W2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "Berlin, Germany",
+    "country": "Germany"
+  },
+  {
+    "name": "Turing Labs Inc.",
+    "batch": "W2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Evolvere BioSciences",
+    "batch": "S2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "Oxford, UK",
+    "country": "United Kingdom"
+  },
+  {
+    "name": "Athelas",
+    "batch": "S2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "Mountain View, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Kite",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Trace",
+    "batch": "W2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Obento Health",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Serra",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Docsum",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Netomi",
+    "batch": "W2016",
+    "year": 2016,
+    "status": "Active",
+    "location": "San Mateo, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Candor",
+    "batch": "W2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Pump.co",
+    "batch": "S2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Health Harbor",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "MindsDB",
+    "batch": "W2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Plexe",
+    "batch": "X2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "2 employees",
+    "country": "Other"
+  },
+  {
+    "name": "Vetnio",
+    "batch": "W2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "6 employees",
+    "country": "Other"
+  },
+  {
+    "name": "CozmoX AI",
+    "batch": "W2022",
+    "year": 2022,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "FleetWorks",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Corgea",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Toma",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Okibi",
+    "batch": "S2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Repaint",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Wordware",
+    "batch": "S2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Cardinal Gray",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Praxim",
+    "batch": "W2025",
+    "year": 2025,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Leena AI",
+    "batch": "S2018",
+    "year": 2018,
+    "status": "Active",
+    "location": "Winslow St, Redwood City, CA 94063, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Zep AI",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Cleancard",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Spellbrush",
+    "batch": "W2018",
+    "year": 2018,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Risotto",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "OneSchema",
+    "batch": "S2021",
+    "year": 2021,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Lysto",
+    "batch": "S2023",
+    "year": 2023,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Atomic Industries",
+    "batch": "W2021",
+    "year": 2021,
+    "status": "Active",
+    "location": "Detroit, MI, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Photoroom",
+    "batch": "S2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "Paris, France",
+    "country": "France"
+  },
+  {
+    "name": "Orangewood Labs",
+    "batch": "W2018",
+    "year": 2018,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Heron Data",
+    "batch": "S2020",
+    "year": 2020,
+    "status": "Active",
+    "location": "New York, NY, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Darmiyan",
+    "batch": "S2017",
+    "year": 2017,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  },
+  {
+    "name": "Onyx",
+    "batch": "W2024",
+    "year": 2024,
+    "status": "Active",
+    "location": "San Francisco, CA, USA",
+    "country": "United States"
+  }
+]
