@@ -30,8 +30,8 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const [companiesRes, statsRes] = await Promise.all([
-          fetch('/yc_ai_companies.json'),
-          fetch('/yc_ai_stats.json')
+          fetch(import.meta.env.BASE_URL + 'yc_ai_companies.json'),
+          fetch(import.meta.env.BASE_URL + 'yc_ai_stats.json')
         ]);
         
         const companiesData = await companiesRes.json();
