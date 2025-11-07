@@ -380,6 +380,90 @@ export default function IndiaView() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Data Table Section */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Building2 className="h-5 w-5" />
+            All Indian YC Companies
+          </CardTitle>
+          <CardDescription>
+            Browse all {stats.total} Y Combinator-backed startups in India
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="rounded-md border">
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b bg-muted/50">
+                    <th className="p-3 text-left font-medium">Company</th>
+                    <th className="p-3 text-left font-medium">Batch</th>
+                    <th className="p-3 text-left font-medium">Industry</th>
+                    <th className="p-3 text-left font-medium">Location</th>
+                    <th className="p-3 text-left font-medium">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {companies.slice(0, 50).map((company, index) => (
+                    <tr key={company.id || index} className="border-b hover:bg-muted/50 transition-colors">
+                      <td className="p-3">
+                        <div>
+                          <a 
+                            href={company.website || company.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="font-medium hover:text-orange-500 transition-colors"
+                          >
+                            {company.name}
+                          </a>
+                          {company.one_liner && (
+                            <p className="text-xs text-muted-foreground mt-1 line-clamp-1">
+                              {company.one_liner}
+                            </p>
+                          )}
+                        </div>
+                      </td>
+                      <td className="p-3">
+                        <Badge variant="outline" className="text-xs">
+                          {company.batch}
+                        </Badge>
+                      </td>
+                      <td className="p-3 text-muted-foreground">
+                        {company.industry || 'N/A'}
+                      </td>
+                      <td className="p-3 text-muted-foreground text-xs">
+                        {company.all_locations}
+                      </td>
+                      <td className="p-3">
+                        <div className="flex items-center gap-2">
+                          <Badge 
+                            variant={company.status === 'Active' ? 'default' : 'secondary'}
+                            className="text-xs"
+                          >
+                            {company.status}
+                          </Badge>
+                          {company.isHiring && (
+                            <Badge variant="outline" className="text-xs bg-green-500/10 text-green-500 border-green-500/20">
+                              Hiring
+                            </Badge>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {companies.length > 50 && (
+              <div className="p-4 text-center text-sm text-muted-foreground border-t">
+                Showing 50 of {companies.length} companies
+              </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
