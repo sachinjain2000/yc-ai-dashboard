@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { DashboardLayout } from "./components/DashboardLayout";
 import Home from "./pages/Home";
 import RawData from "./pages/RawData";
+import IndiaView from "./pages/IndiaView";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/raw-data"} component={RawData} />
+        <Route path={"/india"} component={IndiaView} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

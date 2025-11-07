@@ -7,6 +7,7 @@ import {
   Table,
   Menu,
   X,
+  Flag,
 } from "lucide-react";
 
 interface NavItem {
@@ -28,6 +29,16 @@ const navSections: NavSection[] = [
         title: "Overview",
         href: "/",
         icon: LayoutDashboard,
+      },
+    ],
+  },
+  {
+    title: "REGIONAL VIEWS",
+    items: [
+      {
+        title: "India 🇮🇳",
+        href: "/india",
+        icon: Flag,
       },
     ],
   },
