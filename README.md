@@ -1,256 +1,322 @@
-# Web App Template (Static Frontend)
+# YC AI Dashboard 🚀
 
-Pure React + Tailwind template with shadcn/ui baked in. **Use this README as the checklist for shipping static experiences.**
+> **Live Demo**: [https://sachinjain2000.github.io/yc-ai-dashboard](https://sachinjain2000.github.io/yc-ai-dashboard)
 
-> **Note:** This template includes a minimal `shared/` and `server/` directory with placeholder types to support imported templates. These are just compatibility placeholders - web-static remains a true static-only template without API functionality.
+An interactive analytics dashboard visualizing Y Combinator's AI company portfolio with real-time statistics, trends, and insights.
 
----
-
-## 🤖 AI Development Guide
-
-### Stack Overview
-- Client-only routing powered by React + Wouter.
-- Design tokens are provided through `client/src/index.css` and `tailwind.config.ts`—keep them intact.
-
-### Component Patterns
-
-```tsx
-// Compose pages from shadcn/ui primitives
-import { Button } from "@/components/ui/button";
-
-export function Hero() {
-  return (
-    <section className="rounded-3xl bg-white p-10 shadow-xl">
-      <h1 className="text-4xl font-bold text-slate-900">Launch Quickly</h1>
-      <Button size="lg" className="mt-6">Get Started</Button>
-    </section>
-  );
-}
-```
-
-### File Structure
-
-```
-client/
-  public/         ← Static assets copied verbatim to '/'
-  src/
-    pages/        ← Page-level components
-    components/   ← Reusable UI & shadcn/ui
-    contexts/     ← React contexts
-    hooks/        ← Custom React hooks
-    lib/          ← Utility helpers
-    App.tsx       ← Routes & top-level layout
-    main.tsx      ← React entry point
-    index.css     ← global style
-server/         ← Placeholder for imported template compatibility
-shared/         ← Placeholder for imported template compatibility
-  const.ts      ← Shared constants
-```
-
-Assets placed under `client/public` are served with aggressive caching, so add a content hash to filenames (for example, `logo.3fa9b2e4.svg`) whenever you replace a file and update its references to avoid stale assets.
-
-Files in `client/public` are available at the root of your site—reference them with absolute paths (`/logo.3fa9b2e4.svg`, `/robots.txt`, etc.) from HTML templates, JSX, or meta tags.
-
----
-
-## 🎯 Development Workflow
-
-1. **Compose pages** in `client/src/pages/`. Keep sections modular so they can be reused across routes.
-2. **Share primitives** via `client/src/components/`—extend shadcn/ui when needed instead of duplicating markup.
-3. **Keep styling consistent** by relying on existing Tailwind tokens (spacing, colors, typography).
-4. **Fetch external data** with `useEffect` if the site needs dynamic content from public APIs.
-
----
-
-## 🧱 Tailwind Safeguards
-
-- Preserve the `@layer base` block in `client/src/index.css`; removing it breaks utilities like `border-border`.
-- Do not strip values from `theme.extend` in `tailwind.config.ts`—they power the design tokens used in the UI kit.
-- Stick to utility classes for responsiveness (mobile-first by default).
-
----
-
-## Core Files
-
-`client/src/App.tsx`
-```tsx
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
-import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-
-function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
-}
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
-}
-
-export default App;
-```
-
-`client/src/pages/Home.tsx`
-```tsx
-import { Button } from "@/components/ui/button";
-import { APP_LOGO, APP_TITLE } from "@/const";
-
-/**
- * Build polished static experiences. Visit the README for the full playbook.
- * All content in this page are only for example, delete if unneeded
- */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  return (
-    <div className="min-h-screen flex flex-col">
-      <header className="w-full border-b px-4 flex items-center h-16">
-        <div className="flex items-center gap-2">
-          <img
-            src={APP_LOGO}
-            className="h-8 w-8 rounded-lg border-border bg-background object-cover"
-          />
-          <span className="text-xl font-bold">{APP_TITLE}</span>
-        </div>
-      </header>
-      <main>
-        Example Page
-        <Button variant="default">Example Button</Button>
-      </main>
-    </div>
-  );
-}
-```
----
-
-## ✅ Launch Checklist
-- [ ] UI layout and navigation structure correct, all image src valid.
-- [ ] Success + error paths verified in the browser
-
----
-
-## 🎨 Frontend Best Practices (shadcn-first)
-
-- Prefer shadcn/ui components for interactions to keep a modern, consistent look; import from `@/components/ui/*` (e.g., `button`, `card`, `dialog`).
-- Compose Tailwind utilities with component variants for layout and states; avoid excessive custom CSS. Use built-in `variant`, `size`, etc. where available.
-- Preserve design tokens: keep the `@layer base` rules in `client/src/index.css`. Utilities like `border-border` and `font-sans` depend on them.
-- Consistent design language: use spacing, radius, shadows, and typography via tokens. Extract shared UI into `components/` for reuse instead of copy‑paste.
-- Accessibility and responsiveness: keep visible focus rings and ensure keyboard reachability; design mobile‑first with thoughtful breakpoints.
-- Theming: Choose dark/light theme to start with for ThemeProvider according to your design style (dark or light bg), then manage colors pallette with CSS variables in `client/src/index.css` instead of hard‑coding to keep global consistency;
-- Micro‑interactions and empty states: add motion, empty states, and icons tastefully to improve quality without distracting from content.
-- Navigation: Design clear and intuitive navigation structure appropriate for the app type (e.g., top/side nav for multi-page apps, breadcrumbs or contextual navigation for SPAs)'. When building dashboard-like experience, use sidebar-nav to keep all page entry easy to access.
-
-**React component rules:**
-- Never call setState/navigation in render phase → wrap in `useEffect`
-
----
-
-## Common Pitfalls
-
-### Infinite loading loops from unstable references
-**Anti-pattern:** Creating new objects/arrays in render that are used as query inputs
-```tsx
-// ❌ Bad: New Date() creates new reference every render → infinite queries
-const { data } = trpc.items.getByDate.useQuery({
-  date: new Date(), // ← New object every render!
-});
-
-// ❌ Bad: Array/object literals in query input
-const { data } = trpc.items.getByIds.useQuery({
-  ids: [1, 2, 3], // ← New array reference every render!
-});
-```
-
-**Correct approach:** Stabilize references with useState/useMemo
-```tsx
-// ✅ Good: Initialize once with useState
-const [date] = useState(() => new Date());
-const { data } = trpc.items.getByDate.useQuery({ date });
-
-// ✅ Good: Memoize complex inputs
-const ids = useMemo(() => [1, 2, 3], []);
-const { data } = trpc.items.getByIds.useQuery({ ids });
-```
-
-**Why this happens:** TRPC queries trigger when input references change. Objects/arrays created in render have new references each time, causing infinite re-fetches.
-
-### Navigation dead-ends in subpages
-**Problem:** Creating nested routes without escape routes—no header nav, no sidebar, no back button.
-
-**Solution:** Choose navigation based on app structure:
-```tsx
-// For dashboard/multi-section apps: Use persistent sidebar (from shadcn/ui)
-import { SidebarProvider, Sidebar, SidebarContent, SidebarInset } from "@/components/ui/sidebar";
-
-<SidebarProvider>
-  <Sidebar>
-    <SidebarContent>
-      {/* Navigation menu items - always visible */}
-    </SidebarContent>
-  </Sidebar>
-  <SidebarInset>
-    {children}  {/* Page content */}
-  </SidebarInset>
-</SidebarProvider>
-
-// For linear flows (detail pages, wizards): Use back button
-import { useRouter } from "wouter";
-
-const router = useRouter();
-<div>
-  <Button variant="ghost" onClick={() => router.back()}>
-    ← Back
-  </Button>
-  <ItemDetailPage />
+<div align="center">
+  <img src="client/public/logo.webp" alt="YC AI Dashboard" width="200"/>
 </div>
+
+---
+
+## 📊 Overview
+
+The YC AI Dashboard provides comprehensive visualization and analysis of Y Combinator-backed AI companies. Built with modern web technologies, it offers an intuitive interface to explore company distributions, geographical trends, batch statistics, and success metrics across the YC AI ecosystem.
+
+This dashboard transforms raw company data into actionable insights through interactive charts, real-time filtering, and detailed analytics—making it easy to understand the landscape of AI innovation emerging from Y Combinator.
+
+---
+
+## ✨ Features
+
+### 📈 **Interactive Visualizations**
+- **Bar Charts**: Company distribution by year, country, and batch
+- **Pie Charts**: Status breakdown (Active, Acquired, Public, etc.)
+- **Line Charts**: Growth trends over time
+- **Geographic Analysis**: Top countries and regions for AI companies
+
+### 🎯 **Key Metrics Dashboard**
+- Total number of YC AI companies
+- Year-over-year growth statistics
+- Country-wise distribution
+- Company status breakdown
+- Batch-level analytics
+
+### 🔍 **Data Exploration**
+- Raw data table view with sorting and filtering
+- Search functionality across all company attributes
+- Detailed company information cards
+- Export capabilities for further analysis
+
+### 🎨 **Modern UI/UX**
+- Dark mode optimized interface
+- Responsive design for all devices
+- Smooth animations and transitions
+- Accessible color schemes and typography
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 18** - Modern UI library with hooks
+- **TypeScript** - Type-safe development
+- **Vite** - Lightning-fast build tool
+- **Wouter** - Lightweight client-side routing
+- **Recharts** - Composable charting library
+- **shadcn/ui** - High-quality UI components
+- **TailwindCSS** - Utility-first styling
+
+### State & Data
+- **TanStack Query** - Powerful data fetching and caching
+- **Framer Motion** - Smooth animations
+- **Zod** - Runtime type validation
+
+### Development
+- **ESBuild** - Fast JavaScript bundler
+- **PostCSS** - CSS transformations
+- **Prettier** - Code formatting
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 22+ 
+- pnpm (recommended) or npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/sachinjain2000/yc-ai-dashboard.git
+cd yc-ai-dashboard
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm run dev
 ```
 
-### Dark mode styling without theme configuration
-**Problem:** Using dark foreground colors without setting the theme, making text invisible on default light backgrounds.
+The dashboard will be available at `http://localhost:5173`
 
-**Solution:** Set `defaultTheme="dark"` in App.tsx, then update CSS variables in `index.css`:
-```tsx
-// App.tsx: Set the default theme first
-<ThemeProvider defaultTheme="dark">  {/* Applies .dark class to root */}
-  <div className="text-foreground bg-background">
-    Content  {/* Now uses dark theme CSS variables */}
-  </div>
-</ThemeProvider>
+### Building for Production
+
+```bash
+# Create optimized production build
+pnpm run build
+
+# Preview production build locally
+pnpm run preview
 ```
+
+The build output will be in the `dist/` directory.
+
+---
+
+## 📁 Project Structure
+
+```
+yc-ai-dashboard/
+├── client/                    # Frontend application
+│   ├── public/               # Static assets
+│   │   ├── yc_ai_companies.json    # Company data
+│   │   ├── yc_ai_stats.json        # Aggregated statistics
+│   │   └── mocks/                  # Mock data for development
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   │   ├── ui/          # shadcn/ui components
+│   │   │   ├── DashboardLayout.tsx
+│   │   │   ├── StatsCard.tsx
+│   │   │   └── ...
+│   │   ├── pages/           # Page components
+│   │   │   ├── Home.tsx     # Main dashboard
+│   │   │   └── RawData.tsx  # Data table view
+│   │   ├── contexts/        # React contexts
+│   │   ├── hooks/           # Custom React hooks
+│   │   ├── lib/             # Utility functions
+│   │   └── App.tsx          # Root component
+├── server/                   # Backend (minimal, for future expansion)
+├── shared/                   # Shared types and constants
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## 📊 Data Schema
+
+### Company Data Structure
+
+```typescript
+interface Company {
+  name: string;           // Company name
+  batch: string;          // YC batch (e.g., "W21", "S22")
+  year: number;           // Year founded/joined YC
+  status: string;         // Active, Acquired, Public, etc.
+  location: string | null; // City location
+  country: string | null;  // Country
+}
+```
+
+### Statistics Structure
+
+```typescript
+interface Stats {
+  total_companies: number;
+  by_year: Record<string, number>;
+  by_country: Record<string, number>;
+  by_status: Record<string, number>;
+}
+```
+
+---
+
+## 🎨 Customization
+
+### Theme Configuration
+
+The dashboard uses a dark theme by default. To customize colors, edit `client/src/index.css`:
 
 ```css
-/* index.css: Adjust color palette for dark theme */
-.dark {
-  --background: oklch(0.145 0 0);  /* Dark background */
-  --foreground: oklch(0.985 0 0);  /* Light text */
-  /* ... other variables ... */
+:root {
+  --primary: 20 14.3% 4.1%;
+  --primary-foreground: 60 9.1% 97.8%;
+  /* ... more theme variables */
 }
 ```
+
+### Adding New Visualizations
+
+1. Create a new component in `client/src/components/`
+2. Import Recharts components (Bar, Line, Pie, etc.)
+3. Process data from the `useFetchData` hook
+4. Add the component to `Home.tsx` or `RawData.tsx`
+
+Example:
+
+```tsx
+import { BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+
+export function CustomChart({ data }) {
+  return (
+    <BarChart data={data}>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Tooltip />
+      <Bar dataKey="value" fill="#f97316" />
+    </BarChart>
+  );
+}
+```
+
+---
+
+## 🌐 Deployment
+
+### GitHub Pages (Current)
+
+The dashboard is deployed to GitHub Pages automatically:
+
+1. Build the project: `pnpm run build`
+2. Deploy contents of `dist/public/` to `gh-pages` branch
+3. GitHub Pages serves the site at: `https://sachinjain2000.github.io/yc-ai-dashboard`
+
+### Alternative Deployment Options
+
+**Vercel**
+```bash
+vercel --prod
+```
+
+**Netlify**
+```bash
+netlify deploy --prod --dir=dist/public
+```
+
+**Docker**
+```bash
+docker build -t yc-dashboard .
+docker run -p 3000:3000 yc-dashboard
+```
+
+---
+
+## 📈 Key Insights
+
+The dashboard reveals several interesting patterns in YC's AI portfolio:
+
+- **Growth Acceleration**: Significant increase in AI companies post-2020
+- **Geographic Concentration**: Strong presence in US, followed by emerging hubs
+- **Status Distribution**: Majority of companies remain active and scaling
+- **Batch Trends**: Seasonal patterns in company admissions and success rates
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit your changes**: `git commit -m 'Add amazing feature'`
+4. **Push to the branch**: `git push origin feature/amazing-feature`
+5. **Open a Pull Request**
+
+### Development Guidelines
+
+- Follow the existing code style (enforced by Prettier)
+- Add TypeScript types for all new code
+- Test your changes across different screen sizes
+- Update documentation for new features
+
+---
+
+## 📝 Data Sources
+
+The dashboard uses aggregated, publicly available data about Y Combinator companies. Data is updated periodically to reflect the latest information.
+
+**Data Files:**
+- `yc_ai_companies.json` - Individual company records
+- `yc_ai_stats.json` - Pre-computed statistics for performance
+
+---
+
+## 🔮 Future Enhancements
+
+- [ ] Real-time data updates via API integration
+- [ ] Advanced filtering and search capabilities
+- [ ] Company comparison tool
+- [ ] Export to PDF/Excel functionality
+- [ ] Historical trend analysis
+- [ ] Funding round visualization
+- [ ] Founder demographics insights
+- [ ] Industry category breakdown
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 Author
+
+**Sachin Jain**
+- GitHub: [@sachinjain2000](https://github.com/sachinjain2000)
+- LinkedIn: [sachinjain2000](https://linkedin.com/in/sachinjain2000)
+- Email: sachin.jain@utdallas.edu
+
+---
+
+## 🙏 Acknowledgments
+
+- **Y Combinator** for fostering innovation in AI
+- **shadcn/ui** for beautiful, accessible components
+- **Recharts** for powerful charting capabilities
+- **The open source community** for amazing tools and libraries
+
+---
+
+<div align="center">
+  
+  **[View Live Dashboard](https://sachinjain2000.github.io/yc-ai-dashboard)** | **[Report Bug](https://github.com/sachinjain2000/yc-ai-dashboard/issues)** | **[Request Feature](https://github.com/sachinjain2000/yc-ai-dashboard/issues)**
+  
+  Made with ❤️ by Sachin Jain
+  
+</div>
