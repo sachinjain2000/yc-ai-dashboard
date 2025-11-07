@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from "recharts";
 import { Building2, TrendingUp, CheckCircle, XCircle } from "lucide-react";
+import { fetchDashboardData } from "@/services/ycApi";
 
 interface Company {
   name: string;
@@ -29,13 +30,8 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [companiesRes, statsRes] = await Promise.all([
-          fetch(import.meta.env.BASE_URL + 'yc_ai_companies.json'),
-          fetch(import.meta.env.BASE_URL + 'yc_ai_stats.json')
-        ]);
-        
-        const companiesData = await companiesRes.json();
-        const statsData = await statsRes.json();
+        // Fetch real-time data from YC API
+        const { companies: companiesData, stats: statsData } = await fetchDashboardData();
         
         setCompanies(companiesData);
         setStats(statsData);

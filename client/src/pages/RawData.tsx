@@ -1,4 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { fetchDashboardData } from "@/services/ycApi";
 import {
   Table,
   TableBody,
@@ -31,9 +32,9 @@ export default function RawData() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/yc_ai_companies.json');
-        const data = await response.json();
-        setRawData(data);
+        // Fetch real-time data from YC API
+        const { companies } = await fetchDashboardData();
+        setRawData(companies);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
