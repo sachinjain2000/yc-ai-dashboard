@@ -26,6 +26,18 @@ This dashboard transforms raw company data into actionable insights through inte
 ![Key Insights](screenshots/dashboard-insights.webp)
 *Geographic concentration, growth trends, and success rate analysis*
 
+### India Dashboard Overview
+![India Overview](screenshots/india-overview.webp)
+*210 YC companies in India with key metrics: Active (152), Acquired (20), Currently Hiring (57)*
+
+### India Charts & Analytics
+![India Charts](screenshots/india-charts.webp)
+*City distribution (Bengaluru leads with 108 companies), industry breakdown, and notable companies*
+
+### India Key Insights
+![India Insights](screenshots/india-insights.webp)
+*Notable companies (Razorpay, Meesho, Groww, Zepto) and data-driven insights about the Indian ecosystem*
+
 ---
 
 ## ✨ Features
