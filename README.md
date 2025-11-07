@@ -4,10 +4,6 @@
 
 An interactive analytics dashboard visualizing Y Combinator's AI company portfolio with real-time statistics, trends, and insights.
 
-<div align="center">
-  <img src="client/public/logo.webp" alt="YC AI Dashboard" width="200"/>
-</div>
-
 ---
 
 ## 📊 Overview
