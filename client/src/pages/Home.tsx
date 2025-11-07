@@ -26,6 +26,7 @@ export default function Home() {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<string>('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,6 +36,14 @@ export default function Home() {
         
         setCompanies(companiesData);
         setStats(statsData);
+        setLastUpdated(new Date().toLocaleString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric', 
+          hour: 'numeric', 
+          minute: '2-digit',
+          hour12: true 
+        }));
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -88,12 +97,15 @@ export default function Home() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold text-foreground mb-2">Y Combinator AI Startups Dashboard</h1>
-        <p className="text-muted-foreground">
+        <p className="text-lg text-muted-foreground">
           Comprehensive analytics of AI startups funded by Y Combinator
         </p>
-      </div>
-
-      {/* Stats Cards */}
+        {lastUpdated && (
+          <p className="text-sm text-muted-foreground mt-2">
+            Last updated: {lastUpdated}
+          </p>
+        )}
+      </div>{/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-card border-border">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

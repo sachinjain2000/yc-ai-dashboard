@@ -37,6 +37,7 @@ export default function IndiaView() {
   const [companies, setCompanies] = useState<IndiaCompany[]>([]);
   const [stats, setStats] = useState<IndiaStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState<string>('');
 
   useEffect(() => {
     const fetchIndiaData = async () => {
@@ -90,6 +91,14 @@ export default function IndiaView() {
         });
 
         setStats(stats);
+        setLastUpdated(new Date().toLocaleString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric', 
+          hour: 'numeric', 
+          minute: '2-digit',
+          hour12: true 
+        }));
       } catch (error) {
         console.error('Error fetching India data:', error);
       } finally {
@@ -151,6 +160,11 @@ export default function IndiaView() {
         <p className="text-muted-foreground text-lg">
           Comprehensive analytics of Y Combinator-backed startups in India
         </p>
+        {lastUpdated && (
+          <p className="text-sm text-muted-foreground mt-2">
+            Last updated: {lastUpdated}
+          </p>
+        )}
       </div>
 
       {/* Key Metrics */}
@@ -394,7 +408,7 @@ export default function IndiaView() {
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b bg-muted/50">
@@ -406,7 +420,7 @@ export default function IndiaView() {
                   </tr>
                 </thead>
                 <tbody>
-                  {companies.slice(0, 50).map((company, index) => (
+                  {companies.map((company, index) => (
                     <tr key={company.id || index} className="border-b hover:bg-muted/50 transition-colors">
                       <td className="p-3">
                         <div>
@@ -456,11 +470,9 @@ export default function IndiaView() {
                 </tbody>
               </table>
             </div>
-            {companies.length > 50 && (
-              <div className="p-4 text-center text-sm text-muted-foreground border-t">
-                Showing 50 of {companies.length} companies
-              </div>
-            )}
+            <div className="p-3 text-center text-sm text-muted-foreground border-t bg-muted/30">
+              Showing all {companies.length} companies • Scroll to view more
+            </div>
           </div>
         </CardContent>
       </Card>
